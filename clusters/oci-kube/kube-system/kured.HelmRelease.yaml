@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: kured
-  namespace: kured-system
+  namespace: kube-system
 spec:
   chart:
     spec:
@@ -14,7 +14,7 @@ spec:
       version: ">=5.0.0 <6.0.0"
   interval: 1m0s
   releaseName: kured
-  targetNamespace: kured-system
+  targetNamespace: kube-system
   values:
     configuration:
       forceReboot: true

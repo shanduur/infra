@@ -16,6 +16,8 @@ spec:
   releaseName: cilium
   targetNamespace: kube-system
   values:
+    operator:
+      replicas: 1
     hubble:
       enabled: true
       relay:

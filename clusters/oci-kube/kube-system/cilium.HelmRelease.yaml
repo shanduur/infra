@@ -18,5 +18,7 @@ spec:
   values:
     hubble:
       enabled: true
+      relay:
+        enabled: true
       ui:
         enabled: true

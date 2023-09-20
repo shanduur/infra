@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kured
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: kured
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: kubereboot
+      version: ">=5.0.0 <6.0.0"
+  interval: 1m0s
+  releaseName: kured
+  targetNamespace: kube-system
+  values:
+    configuration:
+      forceReboot: true
+      notifyUrl: https://discord.com/api/webhooks/1095394381156073603/EtYSu_93t0cPs0uVDqn8kqplr4A5VJGsgyxj3V2He0hmP3f5vUGPkzXcwec4KJAedfXT
+      rebootSentinelCommand: sh -c "! needs-restarting --reboothint"

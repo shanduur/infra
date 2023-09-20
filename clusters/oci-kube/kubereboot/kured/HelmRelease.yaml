@@ -18,5 +18,5 @@ spec:
   values:
     configuration:
       forceReboot: true
-      notifyUrl: https://discord.com/api/webhooks/1095394381156073603/EtYSu_93t0cPs0uVDqn8kqplr4A5VJGsgyxj3V2He0hmP3f5vUGPkzXcwec4KJAedfXT
+      notifyUrl: discord://EtYSu_93t0cPs0uVDqn8kqplr4A5VJGsgyxj3V2He0hmP3f5vUGPkzXcwec4KJAedfXT@1095394381156073603
       rebootSentinelCommand: sh -c "! needs-restarting --reboothint"

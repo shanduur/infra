@@ -3,5 +3,10 @@
   "extends": [
     "config:base"
   ],
-  "automerge": false
+  "automerge": false,
+  "flux": {
+    "fileMatch": [
+      "clusters/.+\\.yaml$"
+    ]
+  }
 }

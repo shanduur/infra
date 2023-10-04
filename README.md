@@ -1,9 +1,9 @@
 # Infra
 
 TODO:
-- [ ] Grafana Operator
+- [x] Grafana Operator
 - [ ] Grafana
-- [ ] Prometheus Operator
+- [x] Prometheus Operator
 - [ ] Prometheus
 - [ ] Grafana Pyroscope
 - [ ] OTEL Collector

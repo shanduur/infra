@@ -5,6 +5,6 @@ metadata:
   namespace: monitoring
 spec:
   interval: 5m0s
-  url: oci://ghcr.io/grafana-operator/helm-charts/grafana-operator
+  url: oci://ghcr.io/grafana-operator/kustomize/grafana-operator
   ref:
     tag: v5.4.1

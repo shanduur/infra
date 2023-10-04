@@ -5,7 +5,7 @@ metadata:
   namespace: monitoring
 spec:
   interval: 10m0s
-  targetNamespace: monitoring
+  targetNamespace: grafana
   sourceRef:
     kind: OCIRepository
     name: grafana-operator

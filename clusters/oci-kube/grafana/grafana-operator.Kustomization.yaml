@@ -8,7 +8,7 @@ spec:
   targetNamespace: grafana
   sourceRef:
     kind: OCIRepository
-    name: grafana
+    name: grafana-operator
   path: ./overlays/cluster_scoped
   prune: true
   timeout: 1m

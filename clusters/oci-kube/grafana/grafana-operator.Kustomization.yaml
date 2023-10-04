@@ -2,13 +2,13 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: grafana-operator
-  namespace: monitoring
+  namespace: grafana
 spec:
   interval: 10m0s
   targetNamespace: grafana
   sourceRef:
     kind: OCIRepository
-    name: grafana-operator
+    name: grafana
   path: ./overlays/cluster_scoped
   prune: true
   timeout: 1m

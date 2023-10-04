@@ -2,10 +2,10 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: prometheus-operator
-  namespace: monitoring
+  namespace: telemetry
 spec:
   interval: 10m0s
-  targetNamespace: monitoring
+  targetNamespace: telemetry
   sourceRef:
     kind: GitRepository
     name: prometheus-operator

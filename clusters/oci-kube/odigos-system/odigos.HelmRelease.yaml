@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: odigos
+  namespace: odigos-system
+spec:
+  chart:
+    spec:
+      chart: odigos
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: odigos
+      version: "0.2.39"
+  interval: 1m0s
+  releaseName: odigos
+  targetNamespace: odigos-system

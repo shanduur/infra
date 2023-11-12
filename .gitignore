@@ -1,0 +1,3 @@
+*.Secret.yaml
+*.Secret.yml
+*.env

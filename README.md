@@ -1,9 +1,9 @@
 # Infra
 
 TODO:
-- [x] Grafana Operator
-- [x] Grafana
-- [x] Prometheus Operator
-- [x] Prometheus
+- [ ] MinIO Operator: https://github.com/minio/operator
+- [ ] MinIO
+- [ ] Grafana Tempo Operator: https://github.com/grafana/tempo-operator
+- [ ] Grfana Tempo
 - [ ] Grafana Pyroscope
 - [ ] OTEL Collector

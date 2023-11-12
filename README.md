@@ -4,6 +4,6 @@ TODO:
 - [x] Grafana Operator
 - [x] Grafana
 - [x] Prometheus Operator
-- [ ] Prometheus
+- [x] Prometheus
 - [ ] Grafana Pyroscope
 - [ ] OTEL Collector

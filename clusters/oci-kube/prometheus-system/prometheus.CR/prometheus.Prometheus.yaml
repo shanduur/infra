@@ -9,3 +9,8 @@ spec:
     requests:
       memory: 400Mi
   enableAdminAPI: false
+  alerting:
+    alertmanagers:
+      - namespace: prometheus-system
+        name: alertmanager
+        port: web

@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   shell-linter:
-    name: Run Shellcheck, Checkmake and Perl Critic
+    name: Run Shellcheck
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code

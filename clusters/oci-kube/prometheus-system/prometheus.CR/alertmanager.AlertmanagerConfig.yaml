@@ -11,8 +11,10 @@ spec:
     groupWait: 30s
     groupInterval: 5m
     repeatInterval: 12h
-    receiver: 'webhook'
+    receiver: 'discord'
   receivers:
     - name: 'discord'
-      discord_configs:
-        - url: 'https://discord.com/api/webhooks/1173670787455139840/X0AMEUgIOpp4hkFitTde1FEPP0B4QMhhQPGi1e6P6cQK2zHr4razQN2RqO9aoZshuFSO'
+      discordConfigs:
+        - apiURL:
+            name: discord-webhook
+            key: URL

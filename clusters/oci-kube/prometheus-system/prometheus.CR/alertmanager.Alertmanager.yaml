@@ -5,4 +5,6 @@
 #   namespace: prometheus-system
 # spec:
 #   replicas: 1
-#   configSecret: alertmanager
+#   alertmanagerConfigSelector:
+#     matchLabels:
+#       alertmanagerConfig: alertmanager-config

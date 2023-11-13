@@ -1,8 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
-metadata:
-  name: otel-operator
-  namespace: telemetry
-spec:
-  interval: 5m0s
-  url: https://open-telemetry.github.io/opentelemetry-helm-charts

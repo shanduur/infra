@@ -62,7 +62,7 @@ Renovate is configured to automatically check for updates to dependencies. Refer
 
 ### License
 
-This repository is licensed under the [MIT License](LICENSE). Feel free to modify and adapt it for your needs.
+This repository is licensed under the [The Unlicense](LICENSE). Feel free to modify and adapt it for your needs.
 
 ### Contribution
 

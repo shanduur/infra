@@ -72,7 +72,6 @@ Feel free to contribute by opening issues or submitting pull requests. Your feed
 
 - [ ] MinIO - needs just a tenant;
 - [ ] OTEL Collector - need just deployment via CRDs;
-- [ ] Jaeger/Tempo - need to decide which will work best, neither is Flux freindly;
 - [ ] Prometheus configuration - proper configs for scraping;
 - [ ] Grafana dashboards - presenting cluster and resources in automated manner;
 - [ ] [Cluster API Provider Proxmox](https://github.com/sp-yduck/cluster-api-provider-proxmox)

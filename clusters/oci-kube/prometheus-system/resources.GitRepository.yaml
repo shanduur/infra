@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: resources
+  namespace: prometheus-system
+spec:
+  interval: 5m0s
+  url: https://github.com/shandur/infra
+  ref:
+    branch: main

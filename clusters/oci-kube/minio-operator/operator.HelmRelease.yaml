@@ -11,7 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: minio-operator
-      version: "5.0.11"
+      version: "5.0.12"
   interval: 1m0s
   releaseName: minio-operator
   targetNamespace: minio-operator

@@ -2,30 +2,15 @@ apiVersion: grafana.integreatly.org/v1beta1
 kind: Grafana
 metadata:
   name: grafana
-  namespace: grafana
+  namespace: kube-prometheus-stack
   labels:
     dashboards: "grafana"
 spec:
-  deployment:
-    spec:
-      template:
-        spec:
-          containers:
-            - name: grafana
-              image: docker.io/grafana/grafana:10.2.3
-              env:
-                - name: GF_SECURITY_ADMIN_USER
-                  valueFrom:
-                    secretKeyRef:
-                      key: GF_SECURITY_ADMIN_USER
-                      name: credentials
-                - name: GF_SECURITY_ADMIN_PASSWORD
-                  valueFrom:
-                    secretKeyRef:
-                      key: GF_SECURITY_ADMIN_PASSWORD
-                      name: credentials
-  config:
-    log:
-      mode: "console"
-    auth:
-      disable_login_form: "false"
+  external:
+    url: http://kube-prometheus-stack-grafana.kube-prometheus-stack:80
+    adminPassword:
+      name: kube-prometheus-stack-grafana
+      key: GRAFANA_PASS
+    adminUser:
+      name: kube-prometheus-stack-grafana
+      key: GRAFANA_USER

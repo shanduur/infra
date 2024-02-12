@@ -2,7 +2,7 @@ apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDatasource
 metadata:
   name: pyroscope
-  namespace: grafana
+  namespace: kube-prometheus-stack
 spec:
   instanceSelector:
     matchLabels:

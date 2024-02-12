@@ -18,12 +18,14 @@ spec:
   values:
     operator:
       replicas: 1
+    nodePort:
+      enabled: true
+    ingressController:
+      enabled: true
+      loadbalancerMode: dedicated
     hubble:
       enabled: true
       relay:
         enabled: true
       ui:
         enabled: true
-      ingressController:
-        enabled: true
-        loadbalancerMode: dedicated

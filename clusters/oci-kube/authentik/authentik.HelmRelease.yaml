@@ -1,0 +1,21 @@
+# TODO: missing configuration, need to wait for the Database
+# apiVersion: helm.toolkit.fluxcd.io/v2beta1
+# kind: HelmRelease
+# metadata:
+#   name: authentik
+#   namespace: authentik
+# spec:
+#   chart:
+#     spec:
+#       chart: authentik
+#       reconcileStrategy: ChartVersion
+#       sourceRef:
+#         kind: HelmRepository
+#         name: rancher-server
+#       version: "2023.10.7"
+#   interval: 1m0s
+#   releaseName: authentik
+#   targetNamespace: authentik
+#   valuesFrom:
+#     - kind: Secret
+#       name: authentik-values

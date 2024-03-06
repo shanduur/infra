@@ -4,10 +4,6 @@ metadata:
   name: collector
   namespace: otel-system
 spec:
-  podAnnotations:
-    prometheus.io/scrape: 'true'
-    prometheus.io/path: '/metrics'
-    prometheus.io/port: '8080'
   config: |
     receivers:
       otlp:
@@ -38,3 +34,21 @@ spec:
           receivers: [otlp]
           processors: [batch]
           exporters: [prometheus]
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: collector-pod-monitor
+  namespace: otel-system
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: opentelemetry-collector
+  podMetricsEndpoints:
+  - port: prometheus
+    path: '/metrics'
+  - port: metrics
+    path: '/metrics'
+  namespaceSelector:
+    matchNames:
+    - otel-system

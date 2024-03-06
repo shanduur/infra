@@ -15,8 +15,19 @@ spec:
   interval: 1m0s
   releaseName: tetragon
   targetNamespace: kube-system
-  values:
-    podAnnotations:
-      prometheus.io/scrape: 'true'
-      prometheus.io/path: '/metrics'
-      prometheus.io/port: '2112'
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: tetragon-pod-monitor
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: tetragon
+  podMetricsEndpoints:
+  - targetPort: 2112
+    path: '/metrics'
+  namespaceSelector:
+    matchNames:
+    - kube-system

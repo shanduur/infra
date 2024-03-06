@@ -5,7 +5,7 @@ metadata:
   namespace: kube-system
 spec:
   eventMetadata:
-    infra.cluster: "oci-kube"
+    infra.cluster: "pve-0"
   providerRef:
     name: discord
   eventSeverity: info

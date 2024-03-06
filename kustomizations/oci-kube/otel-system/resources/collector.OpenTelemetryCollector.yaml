@@ -40,6 +40,8 @@ kind: PodMonitor
 metadata:
   name: collector-pod-monitor
   namespace: otel-system
+  labels:
+    prometheus-operator.dev/kube-prometheus-stack: scrape
 spec:
   selector:
     matchLabels:

@@ -18,19 +18,3 @@ spec:
   valuesFrom:
     - kind: Secret
       name: kured-values
----
-apiVersion: monitoring.coreos.com/v1
-kind: PodMonitor
-metadata:
-  name: kured-pod-monitor
-  namespace: kube-system
-spec:
-  selector:
-    matchLabels:
-      app.kubernetes.io/instance: kured
-  podMetricsEndpoints:
-  - port: metrics
-    path: '/metrics'
-  namespaceSelector:
-    matchNames:
-    - kube-system

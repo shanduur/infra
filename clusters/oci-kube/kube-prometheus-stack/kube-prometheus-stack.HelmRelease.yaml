@@ -21,8 +21,3 @@ spec:
         existingSecret: kube-prometheus-stack-grafana
         userKey: "GRAFANA_USER"
         passwordKey: "GRAFANA_PASS"
-    prometheus:
-      prometheusSpec:
-        podMonitorSelector:
-          matchLabels:
-            prometheus-operator.dev/kube-prometheus-stack: scrape

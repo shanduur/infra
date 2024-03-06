@@ -22,7 +22,7 @@ metadata:
   name: tetragon-pod-monitor
   namespace: kube-system
   labels:
-    prometheus-operator.dev/kube-prometheus-stack: scrape
+    release: kube-prometheus-stack
 spec:
   selector:
     matchLabels:

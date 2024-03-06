@@ -41,7 +41,7 @@ metadata:
   name: collector-pod-monitor
   namespace: otel-system
   labels:
-    prometheus-operator.dev/kube-prometheus-stack: scrape
+    release: kube-prometheus-stack
 spec:
   selector:
     matchLabels:

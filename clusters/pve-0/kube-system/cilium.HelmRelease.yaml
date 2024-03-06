@@ -1,0 +1,31 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: cilium
+  namespace: kube-system
+spec:
+  chart:
+    spec:
+      chart: cilium
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: cilium
+      version: "1.15.1"
+  interval: 1m0s
+  releaseName: cilium
+  targetNamespace: kube-system
+  values:
+    operator:
+      replicas: 1
+    nodePort:
+      enabled: true
+    ingressController:
+      enabled: true
+      loadbalancerMode: dedicated
+    hubble:
+      enabled: true
+      relay:
+        enabled: true
+      ui:
+        enabled: true

@@ -21,9 +21,9 @@ spec:
       replicas: 1
     nodePort:
       enabled: true
-    ingressController:
-      enabled: true
-      loadbalancerMode: dedicated
+    # ingressController:
+    #   enabled: true
+    #   loadbalancerMode: shared
     hubble:
       enabled: true
       relay:

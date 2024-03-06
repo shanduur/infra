@@ -15,3 +15,8 @@ spec:
   interval: 1m0s
   releaseName: tetragon
   targetNamespace: kube-system
+  values:
+    podAnnotations:
+      prometheus.io/scrape: 'true'
+      prometheus.io/path: '/metrics'
+      prometheus.io/port: '2112'

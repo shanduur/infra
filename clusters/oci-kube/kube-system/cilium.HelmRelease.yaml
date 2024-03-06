@@ -13,6 +13,7 @@ spec:
         name: cilium
       version: "1.15.1"
   interval: 1m0s
+  timeout: 15m
   releaseName: cilium
   targetNamespace: kube-system
   values:

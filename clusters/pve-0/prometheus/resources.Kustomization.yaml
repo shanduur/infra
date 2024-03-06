@@ -2,13 +2,13 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: resources
-  namespace: kube-system
+  namespace: prometheus
 spec:
   interval: 10m0s
-  targetNamespace: kube-system
+  targetNamespace: prometheus
   sourceRef:
     kind: GitRepository
     name: resources
-  path: "./kustomizations/pve-0/kube-system"
+  path: "./kustomizations/pve-0/prometheus"
   prune: true
   timeout: 1m

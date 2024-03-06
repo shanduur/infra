@@ -10,5 +10,5 @@ spec:
     kind: GitRepository
     name: resources
   path: "./kustomizations/oci-kube/kube-system"
-  prune: false
+  prune: true
   timeout: 1m

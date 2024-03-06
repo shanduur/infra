@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: resources
+  namespace: prometheus
+spec:
+  interval: 5m0s
+  url: https://github.com/shanduur/infra
+  ref:
+    branch: main

@@ -9,6 +9,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: resources
-  path: "./kustomizations/oci-kube/grafana"
+  path: "./kustomizations/oci-kube/kube-prometheus-stack"
   prune: false
   timeout: 1m

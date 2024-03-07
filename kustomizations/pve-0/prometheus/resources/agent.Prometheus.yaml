@@ -22,11 +22,5 @@ spec:
   scrapeConfigSelector:
     matchLabels:
       prometheus: agent
-  # TODO: add this once remote write config is set on prometheus
-  # remoteWrite:
-  # - url: ""
-  #   authorization:
-  #     type: Bearer
-  #     credentials:
-  #       key: auth
-  #       name: prom-remote-write-auth
+  remoteWrite:
+  - url: "http://oci-kube.tail4d421.ts.net:30090"

@@ -3,5 +3,4 @@ kind: Kustomization
 resources:
 - ./resources/agent.Prometheus.yaml
 - ./resources/iot.ScrapeConfig.yaml
-- ./resources/prometheus-pve-exporter.AiO.yaml
 - ./resources/pve.ServiceMonitor.yaml

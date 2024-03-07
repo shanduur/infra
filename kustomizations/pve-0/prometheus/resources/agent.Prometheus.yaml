@@ -1,0 +1,32 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: PrometheusAgent
+metadata:
+  name: agent
+  namespace: prometheus
+  labels:
+    prometheus: agnet
+spec:
+  serviceMonitorNamespaceSelector: {}
+  serviceMonitorSelector:
+    matchLabels:
+      prometheus: agent
+  podMonitorNamespaceSelector: {}
+  podMonitorSelector:
+    matchLabels:
+      prometheus: agent
+  probeNamespaceSelector: {}
+  probeSelector:
+    matchLabels:
+      prometheus: agent
+  scrapeConfigNamespaceSelector: {}
+  scrapeConfigSelector:
+    matchLabels:
+      prometheus: agent
+  # TODO: add this once remote write config is set on prometheus
+  # remoteWrite:
+  # - url: ""
+  #   authorization:
+  #     type: Bearer
+  #     credentials:
+  #       key: auth
+  #       name: prom-remote-write-auth

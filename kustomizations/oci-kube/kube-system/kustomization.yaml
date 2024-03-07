@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - ./resources/alerts.Alert.yaml
 - ./resources/discord.Provider.yaml
+- ./resources/monitors.PodMonitor.yaml

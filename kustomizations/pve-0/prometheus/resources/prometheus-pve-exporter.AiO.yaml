@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-pve-exporter
+  namespace: prometheus
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: pve-exporter
+  template:
+    metadata:
+      labels:
+        k8s-app: pve-exporter
+    spec:
+      volumes:
+      - name: config-volume
+        secret:
+          secretName: pve-exporter-config
+      containers:
+      - name: pve-exporter
+        image: docker.io/prompve/prometheus-pve-exporter:v3.2
+        command:
+        - --config.file /mnt/prometheus-pve-exporter/config.yaml
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
+        ports:
+        - name: metrics
+          containerPort: 9221
+        volumeMounts:
+        - name: config-volume
+          readOnly: true
+          mountPath: "/mnt/prometheus-pve-exporter/"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-pve-exporter
+  namespace: prometheus
+spec:
+  selector:
+    k8s-app: pve-exporter
+  ports:
+  - port: 9221
+    targetPort: metrics
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: prometheus-pve-exporter
+  namespace: prometheus
+  labels:
+    prometheus: agent
+spec:
+  namespaceSelector:
+    matchNames:
+    - prometheus
+  selector:
+    matchLabels:
+      k8s-app: pve-exporter
+  endpoints:
+  - port: metrics
+    interval: 10s

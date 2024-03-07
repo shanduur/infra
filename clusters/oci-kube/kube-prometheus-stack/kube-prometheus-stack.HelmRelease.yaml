@@ -21,3 +21,6 @@ spec:
         existingSecret: kube-prometheus-stack-grafana
         userKey: "GRAFANA_USER"
         passwordKey: "GRAFANA_PASS"
+    prometheus:
+      prometheusSpec:
+        enableRemoteWriteReceiver: true

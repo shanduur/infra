@@ -19,7 +19,7 @@ spec:
           secretName: pve-exporter-config
       containers:
       - name: pve-exporter
-        image: docker.io/prompve/prometheus-pve-exporter:v3.2
+        image: docker.io/prompve/prometheus-pve-exporter:3.2
         command:
         - --config.file /mnt/prometheus-pve-exporter/config.yaml
         resources:

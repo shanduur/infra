@@ -14,6 +14,7 @@ spec:
       pve-x.homelab/service: node-exporter
   endpoints:
   - port: metrics
+    path: /metrics
     interval: 10s
 ---
 apiVersion: v1
@@ -66,3 +67,39 @@ spec:
     port: 9100
     protocol: TCP
     targetPort: 9100
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: pve-exporter
+  namespace: prometheus
+  labels:
+    prometheus: agent
+spec:
+  namespaceSelector:
+    matchNames:
+    - prometheus
+  selector:
+    matchLabels:
+      pve-x.homelab/service: pve-exporter
+  endpoints:
+  - port: metrics
+    path: /pve
+    interval: 10s
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pve-0-pve-exporter
+  namespace: prometheus
+  labels:
+    pve-x.homelab/service: pve-exporter
+spec:
+  type: ExternalName
+  externalName: pve-0.tail4d421.ts.net
+  clusterIP: ""
+  ports:
+  - name: metrics
+    port: 9221
+    protocol: TCP
+    targetPort: 9221

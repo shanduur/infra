@@ -6,6 +6,7 @@ metadata:
   labels:
     prometheus: agnet
 spec:
+  serviceAccountName: prometheus
   serviceMonitorNamespaceSelector: {}
   serviceMonitorSelector:
     matchLabels:

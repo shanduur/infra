@@ -5,6 +5,8 @@ resources:
 - ./resources/discord-webhook.SealedSecret.yaml
 - ./resources/grafana.Grafana.yaml
 - ./resources/kube-prometheus-stack-grafana.SealedSecret.yaml
-- ./resources/pve-dashboard.GrafanaDashboard.yaml
 - ./resources/pyroscope.GrafanaDatasource.yaml
 - ./resources/tempo.GrafanaDatasource.yaml
+# dashboards
+- ./resources/dashboards/pve-dashboard.GrafanaDashboard.yaml
+- ./resources/dashboards/energy.GrafanaDashboard.yaml

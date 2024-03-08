@@ -15,3 +15,6 @@ spec:
   interval: 1m0s
   releaseName: tailscale
   targetNamespace: tailscale
+  valuesFrom:
+  - kind: Secret
+    name: tailscale-values

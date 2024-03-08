@@ -1,0 +1,11 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: tailscale
+  namespace: tailscale
+spec:
+  interval: 5m0s
+  url: https://pkgs.tailscale.com/helmcharts
+  valuesFrom:
+  - kind: Secret
+    name: tailscale-values

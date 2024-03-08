@@ -21,12 +21,6 @@ spec:
         existingSecret: kube-prometheus-stack-grafana
         userKey: "GRAFANA_USER"
         passwordKey: "GRAFANA_PASS"
-      ingress:
-        ingressClassName: haproxy
-        enabled: true
-        hosts:
-        - oci-kube.tail4d421.ts.net
-        path: /grafana
     prometheus:
       prometheusSpec:
         enableRemoteWriteReceiver: true

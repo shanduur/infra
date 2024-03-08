@@ -1,0 +1,31 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: ScrapeConfig
+metadata:
+  name: node-exporter
+  namespace: prometheus
+  labels:
+    prometheus: agent
+spec:
+  metricsPath: '/metrics'
+  staticConfigs:
+  - labels:
+      job: proxmox-node-exporter
+    targets:
+    - pve-0.tail4d421.ts.net:9100
+    - pve-1.tail4d421.ts.net:9100
+    - pve-2.tail4d421.ts.net:9100
+---
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: ScrapeConfig
+metadata:
+  name: pve-exporter
+  namespace: prometheus
+  labels:
+    prometheus: agent
+spec:
+  metricsPath: '/pve'
+  staticConfigs:
+  - labels:
+      job: prometheus-pve-exporter
+    targets:
+    - pve-0.tail4d421.ts.net:9221

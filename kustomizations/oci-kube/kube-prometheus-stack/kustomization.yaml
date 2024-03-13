@@ -10,3 +10,4 @@ resources:
 # dashboards
 - ./resources/dashboards/pve-dashboard.GrafanaDashboard.yaml
 - ./resources/dashboards/energy.GrafanaDashboard.yaml
+- ./resources/dashboards/security.GrafanaDashboard.yaml

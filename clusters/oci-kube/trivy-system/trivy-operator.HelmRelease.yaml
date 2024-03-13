@@ -15,3 +15,6 @@ spec:
   interval: 1m0s
   releaseName: trivy-operator
   targetNamespace: trivy-system
+  valuesFrom:
+  - kind: Secret
+    name: trivy-operator-values

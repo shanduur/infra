@@ -7,6 +7,7 @@
   <a href="http://kured.dev" target="_blank"><img src="./resources/kured.png" height="32px"></a>
   <a href="http://k3s.io" target="_blank"><img src="./resources/k3s.png" height="32px"></a>
   <a href="http://cilium.io" target="_blank"><img src="./resources/cilium.png" height="32px"></a>
+  <a href="https://tailscale.com" target="_blank"><img src="./resources/tailscale.png" height="32px"></a>
   <a href="http://tetragon.io" target="_blank"><img src="./resources/tetragon.png" height="32px"></a>
   <a href="https://trivy.dev" target="_blank"><img src="./resources/trivy.png" height="32px"></a>
   <a href="https://grafana.com/oss/grafana/" target="_blank"><img src="./resources/grafana.png" height="32px"></a>
@@ -18,13 +19,6 @@
 ### Overview
 
 This repository contains the infrastructure code for managing a Kubernetes cluster on Oracle Cloud Infrastructure (OCI) using GitOps principles. The deployment and configuration are orchestrated with Flux and automated updates are handled by Renovate.
-
-### Key Components
-
-- **clusters**: Contains Kubernetes manifests organized by namespaces, managing various components such as Cilium, Prometheus, Grafana, Odigos, and more.
-- **renovate.json**: Configuration file for Renovate, ensuring dependencies are kept up-to-date automatically.
-- **scripts**: Helpful scripts for managing Flux and installing k3s (k3sup.sh).
-- **upgrades**: YAML files specifying the Kubernetes version upgrades for specific clusters.
 
 ### Getting Started
 
@@ -55,12 +49,6 @@ This repository contains the infrastructure code for managing a Kubernetes clust
 
 Renovate is configured to automatically check for updates to dependencies. Refer to `renovate.json` for configuration details.
 
-### Additional Resources
-
-- [Flux](https://toolkit.fluxcd.io/)
-- [Renovate](https://docs.renovatebot.com/)
-- [k3s](https://k3s.io/)
-
 ### License
 
 This repository is licensed under the [The Unlicense](LICENSE). Feel free to modify and adapt it for your needs.
@@ -68,8 +56,3 @@ This repository is licensed under the [The Unlicense](LICENSE). Feel free to mod
 ### Contribution
 
 Feel free to contribute by opening issues or submitting pull requests. Your feedback and contributions are highly appreciated!
-
-### TODO
-
-- [ ] Grafana dashboards - presenting cluster and resources in automated manner;
-- [ ] [Cluster API Provider Proxmox](https://github.com/sp-yduck/cluster-api-provider-proxmox)

@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: podinfo
+  namespace: kubecon-eu24
+spec:
+  interval: 5m0s
+  url: https://github.com/stefanprodan/podinfo.git
+  ref:
+    branch: master

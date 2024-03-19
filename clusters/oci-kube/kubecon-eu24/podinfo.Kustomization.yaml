@@ -1,0 +1,27 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: podinfo
+  namespace: kubecon-eu24
+spec:
+  interval: 10m0s
+  targetNamespace: kubecon-eu24
+  sourceRef:
+    kind: GitRepository
+    name: podinfo
+  path: "./kustomize"
+  prune: true
+  timeout: 1m
+  patches:
+  - patch: |
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: podinfo
+      spec:
+        template:
+          spec:
+            containers:
+            - name: podinfod
+              args:
+              - --ui-message="greetings from Kubecon EU 2024"

@@ -7,10 +7,10 @@ metadata:
     dashboards: "grafana"
 spec:
   external:
-    url: http://loki-stack-grafana.grafana:80
+    url: http://grafana.grafana:80
     adminPassword:
-      name: loki-stack-grafana
+      name: grafana
       key: admin-password
     adminUser:
-      name: loki-stack-grafana
+      name: grafana
       key: admin-user

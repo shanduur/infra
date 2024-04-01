@@ -1,17 +1,17 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
-  name: prometheus
+  name: grafana-agent-operator
   namespace: grafana
 spec:
   chart:
     spec:
-      chart: prometheus
+      chart: grafana-agent-operator
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: prometheus-community
-      version: "25.19.0"
+        name: grafana
+      version: "0.3.19"
   interval: 1m0s
-  releaseName: prometheus
+  releaseName: grafana-agent-operator
   targetNamespace: grafana

@@ -9,7 +9,7 @@ spec:
       dashboards: "grafana"
   datasource:
     name: Loki
-    type: grafana-loki-datasource
+    type: loki
     access: proxy
     url: http://loki-stack.grafana:3100
     isDefault: false

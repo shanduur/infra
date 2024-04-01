@@ -16,6 +16,8 @@ spec:
   releaseName: loki-stack
   targetNamespace: grafana
   values:
+    grafana:
+      enabled: true
     loki:
       commonConfig:
         replication_factor: 1

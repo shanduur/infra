@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ./resources/grafana.Grafana.yaml
-# - ./resources/loki.GrafanaDatasource.yaml
+- ./resources/loki.GrafanaDatasource.yaml
 - ./resources/prometheus.GrafanaDatasource.yaml
 - ./resources/pyroscope.GrafanaDatasource.yaml
 - ./resources/tempo.GrafanaDatasource.yaml

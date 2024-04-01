@@ -6,11 +6,11 @@ metadata:
   labels:
     dashboards: "grafana"
 spec:
-  config:
-    log:
-      mode: "console"
-    auth:
-      disable_login_form: "false"
-    security:
-      admin_user: root
-      admin_password: secret
+  external:
+    url: http://grafana.grafana:80
+    adminPassword:
+      name: grafana
+      key: admin-password
+    adminUser:
+      name: grafana
+      key: admin-user

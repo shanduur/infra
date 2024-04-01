@@ -11,6 +11,6 @@ spec:
     name: Loki
     type: grafana-loki-datasource
     access: proxy
-    url: http://loki.grafana:3100
+    url: http://loki-stack.grafana:3100
     isDefault: false
     editable: true

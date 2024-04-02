@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: loki
+  namespace: grafana
+spec:
+  chart:
+    spec:
+      chart: loki
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: grafana
+      version: "5.47.2"
+  interval: 1m0s
+  releaseName: loki
+  targetNamespace: grafana
+  values:
+    loki:
+      commonConfig:
+        replication_factor: 1
+      storage:
+        type: 'filesystem'
+    singleBinary:
+      replicas: 1

@@ -11,6 +11,6 @@ spec:
     name: Loki
     type: loki
     access: proxy
-    url: http://loki.grafana:3100
+    url: http://loki-gateway.grafana:80
     isDefault: false
     editable: true

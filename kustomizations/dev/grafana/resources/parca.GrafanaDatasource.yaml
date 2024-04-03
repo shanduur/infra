@@ -8,7 +8,7 @@ spec:
     matchLabels:
       dashboards: "grafana"
   datasource:
-    name: Pyroscope
+    name: Parca
     type: parca
     access: proxy
     url: http://parca.grafana:3100

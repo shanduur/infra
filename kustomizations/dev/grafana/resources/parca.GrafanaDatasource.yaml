@@ -1,7 +1,7 @@
 apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDatasource
 metadata:
-  name: pyroscope
+  name: parca
   namespace: grafana
 spec:
   instanceSelector:
@@ -9,8 +9,8 @@ spec:
       dashboards: "grafana"
   datasource:
     name: Pyroscope
-    type: grafana-pyroscope-datasource
+    type: parca
     access: proxy
-    url: http://pyroscope.grafana:4040
+    url: http://parca.grafana:3100
     isDefault: false
     editable: true

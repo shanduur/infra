@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - ./resources/grafana.Grafana.yaml
 - ./resources/loki.GrafanaDatasource.yaml
+- ./resources/parca.GrafanaDatasource.yaml
 - ./resources/prometheus.GrafanaDatasource.yaml
-- ./resources/pyroscope.GrafanaDatasource.yaml
 - ./resources/tempo.GrafanaDatasource.yaml

@@ -3,7 +3,7 @@
 set -e
 set -o pipefail
 
-X_NAME="${X_NAME:-kubernetes}"
+X_NAME="${1:-kubernetes}"
 
 flux bootstrap github \
     --token-auth \

@@ -9,7 +9,6 @@
   <a href="http://cilium.io" target="_blank"><img src="./resources/cilium.png" height="32px"></a>
   <a href="https://tailscale.com" target="_blank"><img src="./resources/tailscale.png" height="32px"></a>
   <a href="http://tetragon.io" target="_blank"><img src="./resources/tetragon.png" height="32px"></a>
-  <a href="https://trivy.dev" target="_blank"><img src="./resources/trivy.png" height="32px"></a>
   <a href="https://grafana.com/oss/grafana/" target="_blank"><img src="./resources/grafana.png" height="32px"></a>
   <a href="https://prometheus.io" target="_blank"><img src="./resources/prometheus.png" height="32px"></a>
 </p>

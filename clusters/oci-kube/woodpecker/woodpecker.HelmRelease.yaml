@@ -17,5 +17,16 @@ spec:
   targetNamespace: woodpecker
   values:
     server:
+      env: {}
+      ingress:
+        enabled: true
+        tls:
+        - hosts:
+          - 'woodpecker'
       extraSecretNamesForEnvFrom:
+      - "agent-config"
       - "github-config"
+      - "server-config"
+    agent:
+      extraSecretNamesForEnvFrom:
+      - "agent-config"

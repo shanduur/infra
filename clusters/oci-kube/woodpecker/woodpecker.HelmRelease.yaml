@@ -20,6 +20,7 @@ spec:
       env: {}
       ingress:
         enabled: true
+        ingressClassName: tailscale
         tls:
         - hosts:
           - 'woodpecker'

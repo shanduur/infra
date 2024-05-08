@@ -15,3 +15,7 @@ spec:
   interval: 1m0s
   releaseName: woodpecker
   targetNamespace: woodpecker
+  values:
+    server:
+      extraSecretNamesForEnvFrom:
+      - "github-config"

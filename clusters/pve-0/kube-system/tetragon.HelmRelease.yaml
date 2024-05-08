@@ -15,3 +15,7 @@ spec:
   interval: 1m0s
   releaseName: tetragon
   targetNamespace: kube-system
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace

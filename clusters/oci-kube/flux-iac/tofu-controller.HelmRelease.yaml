@@ -15,5 +15,9 @@ spec:
   interval: 1m0s
   releaseName: tofu-controller
   targetNamespace: flux-iac
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
   values:
     installCRDs: true

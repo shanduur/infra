@@ -15,6 +15,10 @@ spec:
   interval: 1m0s
   releaseName: authentik
   targetNamespace: authentik
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
   valuesFrom:
   - kind: Secret
     name: authentik-values

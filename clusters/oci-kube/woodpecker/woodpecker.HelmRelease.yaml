@@ -15,6 +15,3 @@ spec:
   interval: 1m0s
   releaseName: woodpecker
   targetNamespace: woodpecker
-  valuesFrom:
-  - kind: Secret
-    name: woodpecker-values

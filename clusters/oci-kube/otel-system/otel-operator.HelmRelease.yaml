@@ -15,3 +15,7 @@ spec:
   interval: 1m0s
   releaseName: otel-operator
   targetNamespace: otel-system
+  values:
+    manager:
+      collectorImage:
+        repository: "otel/opentelemetry-collector-contrib"

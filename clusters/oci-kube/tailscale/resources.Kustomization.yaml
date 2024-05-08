@@ -8,7 +8,8 @@ spec:
   targetNamespace: tailscale
   sourceRef:
     kind: GitRepository
-    name: resources
+    name: flux-system
+    namespace: flux-system
   path: "./kustomizations/oci-kube/tailscale"
   prune: true
   timeout: 1m

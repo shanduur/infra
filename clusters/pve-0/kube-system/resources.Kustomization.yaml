@@ -8,7 +8,8 @@ spec:
   targetNamespace: kube-system
   sourceRef:
     kind: GitRepository
-    name: resources
+    name: flux-system
+    namespace: flux-system
   path: "./kustomizations/pve-0/kube-system"
   prune: true
   timeout: 1m

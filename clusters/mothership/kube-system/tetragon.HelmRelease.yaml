@@ -19,10 +19,3 @@ spec:
     crds: CreateReplace
   upgrade:
     crds: CreateReplace
-  values:
-    tetragon:
-      prometheus:
-        serviceMonitor:
-          enabled: true
-          labelsOverride:
-            release: kube-prometheus-stack

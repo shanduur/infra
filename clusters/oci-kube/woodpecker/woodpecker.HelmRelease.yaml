@@ -21,7 +21,8 @@ spec:
       ingress:
         enabled: true
         ingressClassName: tailscale
-        host: woodpecker
+        hosts:
+        - host: woodpecker
         tls:
         - hosts:
           - 'woodpecker'

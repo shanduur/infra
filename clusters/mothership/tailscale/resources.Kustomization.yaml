@@ -1,0 +1,15 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: resources
+  namespace: tailscale
+spec:
+  interval: 10m0s
+  targetNamespace: tailscale
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
+  path: "./kustomizations/oci-kube/tailscale"
+  prune: true
+  timeout: 1m

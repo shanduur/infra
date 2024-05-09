@@ -1,23 +1,29 @@
 # Infra
 
 <p align="center">
-  <img src="./resources/kubernetes.png" alt="Kubernetes" width="256px"/></br>
   <a href="http://fluxcd.io" target="_blank"><img src="./resources/flux.png" height="32px"></a>
   <a href="https://www.mend.io/renovate/" target="_blank"><img src="./resources/renovate.png" height="32px"></a>
   <a href="http://kured.dev" target="_blank"><img src="./resources/kured.png" height="32px"></a>
+  <a href="https://cluster-api.sigs.k8s.io" target="_blank"><img src="./resources/capi.svg" height="32px"></a>
   <a href="http://k3s.io" target="_blank"><img src="./resources/k3s.png" height="32px"></a>
+  <a href="https://linode.com" target="_blank"><img src="./resources/linode.png" height="32px"></a>
+  <a href="http://proxmox.com" target="_blank"><img src="./resources/proxmox.png" height="32px"></a>
+  </br><img src="./resources/kubernetes.png" alt="Kubernetes" width="256px"/></br>
   <a href="http://cilium.io" target="_blank"><img src="./resources/cilium.png" height="32px"></a>
+  <a href="https://www.tigera.io/project-calico/" target="_blank"><img src="./resources/calico.png" height="32px"></a>
   <a href="https://tailscale.com" target="_blank"><img src="./resources/tailscale.png" height="32px"></a>
   <a href="http://tetragon.io" target="_blank"><img src="./resources/tetragon.png" height="32px"></a>
   <a href="https://grafana.com/oss/grafana/" target="_blank"><img src="./resources/grafana.png" height="32px"></a>
   <a href="https://prometheus.io" target="_blank"><img src="./resources/prometheus.png" height="32px"></a>
+  <a href="https://www.jaegertracing.io" target="_blank"><img src="./resources/jaeger.png" height="32px"></a>
+  <a href="https://www.parca.dev" target="_blank"><img src="./resources/parca.png" height="32px"></a>
 </p>
 
 ## Infrastructure as Code with GitOps using Flux and Renovate
 
 ### Overview
 
-This repository contains the infrastructure code for managing a Kubernetes cluster on Oracle Cloud Infrastructure (OCI) using GitOps principles. The deployment and configuration are orchestrated with Flux and automated updates are handled by Renovate.
+This repository contains the infrastructure code for managing a Kubernetes cluster using GitOps principles. The deployment and configuration are orchestrated with Flux and automated updates are handled by Renovate.
 
 ### Getting Started
 
@@ -27,22 +33,32 @@ This repository contains the infrastructure code for managing a Kubernetes clust
     git clone <repository_url>
     ```
 
-3. Install k3s on your cluster using the provided script:
+3. Create new cluster
+   * Install k3s on your cluster using the provided script:
+
+        ```bash
+        ./scripts/k3sup.sh
+        ```
+
+    * Create new cluster LKE using OpenTofu:
+
+        ```bash
+        export LINODE_TOKEN='your linode token'
+        tofu -chdir=./terraform/lke init -upgrade
+        tofu -chdir=./terraform/lke plan
+        tofu -chdir=./terraform/lke apply -var='k8s_cluster_name=<your cluster name>'
+        ```
+
+4. Set up Flux on your cluster using the provided script:
 
     ```bash
-    ./scripts/k3sup.sh
+    export GITHUB_TOKEN='<your github token>'
+    ./scripts/flux.sh '<your cluster name>'
     ```
 
-3. Set up Flux on your cluster using the provided script:
+5. Customize your cluster configuration in the `clusters` directory.
 
-    ```bash
-    export GITHUB_TOKEN=<your github token>
-    ./scripts/flux.sh
-    ```
-
-4. Customize your cluster configuration in the `clusters` directory.
-
-5. Apply changes to your cluster by committing and pushing to this repository.
+6. Apply changes to your cluster by committing and pushing to this repository.
 
 ### Automated Updates
 

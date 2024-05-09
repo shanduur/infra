@@ -4,4 +4,3 @@ resources:
 - ./resources/alerts.Alert.yaml
 - ./resources/discord-webhook.SealedSecret.yaml
 - ./resources/discord.Provider.yaml
-- ./resources/kured-values.SealedSecret.yaml

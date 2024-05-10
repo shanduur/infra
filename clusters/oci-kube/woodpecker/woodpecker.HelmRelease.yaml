@@ -23,6 +23,10 @@ spec:
         ingressClassName: tailscale
         hosts:
         - host: woodpecker
+          path: "/"
+          backend:
+            serviceName: woodpecker-server.woodpecker
+            servicePort: 80
         tls:
         - hosts:
           - 'woodpecker'

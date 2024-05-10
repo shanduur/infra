@@ -37,7 +37,7 @@ spec:
       - "server-config"
       - "shared-config"
     agent:
-      env: []
+      env: {}
       extraSecretNamesForEnvFrom:
       - "agent-config"
       - "shared-config"

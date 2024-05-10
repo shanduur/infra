@@ -4,3 +4,4 @@ resources:
 - ./resources/agent-config.SealedSecret.yaml
 - ./resources/github-config.SealedSecret.yaml
 - ./resources/server-config.SealedSecret.yaml
+- ./resources/shared-config.SealedSecret.yaml

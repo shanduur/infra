@@ -35,6 +35,9 @@ spec:
       - "agent-config"
       - "github-config"
       - "server-config"
+      - "shared-config"
     agent:
+      env: []
       extraSecretNamesForEnvFrom:
       - "agent-config"
+      - "shared-config"

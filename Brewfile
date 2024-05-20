@@ -1,5 +1,6 @@
 tap "fluxcd/tap"
 brew "cilium-cli"
+brew "clusterctl"
 brew "fluxcd/tap/flux"
 brew "kubeseal"
 brew "opentofu"

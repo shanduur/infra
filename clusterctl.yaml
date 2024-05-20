@@ -1,0 +1,4 @@
+providers:
+- type: InfrastructureProvider
+  name: linode-linode
+  url: https://github.com/linode/cluster-api-provider-linode/releases/latest/infrastructure-components.yaml

@@ -1,4 +1,0 @@
-provisionDataStore:
-  cassandra: false
-storage:
-  type: badger

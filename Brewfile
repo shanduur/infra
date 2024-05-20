@@ -1,4 +1,5 @@
+tap "fluxcd/tap"
 brew "cilium-cli"
-brew "flux"
+brew "fluxcd/tap/flux"
 brew "kubeseal"
 brew "opentofu"

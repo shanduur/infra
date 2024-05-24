@@ -11,7 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: jaegertracing
-      version: "3.0.4"
+      version: "3.0.8"
   interval: 1m0s
   releaseName: jaeger
   targetNamespace: observability

@@ -7,11 +7,10 @@ resource "linode_lke_cluster" "lke" {
 
   tags = [
     "prod",
-    "mothership",
   ]
 
   pool {
-    type  = "g6-standard-1"
+    type  = "g6-standard-2"
     count = 3
   }
 }

@@ -2,7 +2,7 @@ terraform {
   required_providers {
     linode = {
       source  = "linode/linode"
-      version = "2.20.1"
+      version = "2.21.1"
     }
 
     null = {

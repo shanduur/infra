@@ -22,10 +22,11 @@ resource "null_resource" "kubeconfig" {
 
   triggers = {
     kubeconfig = md5(linode_lke_cluster.lke.kubeconfig)
+    output     = md5(var.kubeconfig)
     script     = filemd5("./scripts/kubeconfig.sh")
   }
 
   provisioner "local-exec" {
-    command = "./scripts/kubeconfig.sh '${var.kubeconfig}' '${linode_lke_cluster.lke.id}' '${linode_lke_cluster.lke.kubeconfig}'"
+    command = "./scripts/kubeconfig.sh '${pathexpand(var.kubeconfig)}' '${linode_lke_cluster.lke.id}' '${linode_lke_cluster.lke.kubeconfig}'"
   }
 }

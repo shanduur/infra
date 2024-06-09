@@ -11,7 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
-      version: "60.0.1"
+      version: "60.0.2"
   interval: 1m0s
   releaseName: kube-prometheus-stack
   targetNamespace: kube-prometheus-stack

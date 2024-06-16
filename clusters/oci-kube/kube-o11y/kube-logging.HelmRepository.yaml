@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: kube-logging
+  namespace: kube-o11y
+spec:
+  type: "oci"
+  interval: 5m0s
+  url: oci://ghcr.io/kube-logging/helm-charts

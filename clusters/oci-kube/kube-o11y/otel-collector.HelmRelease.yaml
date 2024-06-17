@@ -14,7 +14,7 @@ spec:
         name: open-telemetry
       version: "0.93.3"
   interval: 1m0s
-  releaseName: otel-collector
+  releaseName: core
   targetNamespace: kube-o11y
   install:
     crds: CreateReplace

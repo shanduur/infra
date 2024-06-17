@@ -2,25 +2,27 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: otel-operator
+  name: otel-collector
   namespace: kube-o11y
 spec:
   chart:
     spec:
-      chart: opentelemetry-operator
+      chart: opentelemetry-collector
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
         name: open-telemetry
-      version: "0.62.0"
+      version: "0.93.3"
   interval: 1m0s
-  releaseName: otel-operator
+  releaseName: otel-collector
   targetNamespace: kube-o11y
   install:
     crds: CreateReplace
   upgrade:
     crds: CreateReplace
   values:
-    manager:
-      collectorImage:
-        repository: otel/opentelemetry-collector-contrib
+    mode: deployment
+    image:
+      repository: otel/opentelemetry-collector-contrib
+    command:
+      name: otelcol-contrib

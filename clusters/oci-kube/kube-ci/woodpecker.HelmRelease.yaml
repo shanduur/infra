@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: woodpecker
-  namespace: woodpecker
+  namespace: kube-ci
 spec:
   chart:
     spec:
@@ -14,7 +14,7 @@ spec:
       version: "1.5.0"
   interval: 1m0s
   releaseName: woodpecker
-  targetNamespace: woodpecker
+  targetNamespace: kube-ci
   values:
     server:
       env: []

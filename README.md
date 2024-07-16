@@ -7,7 +7,6 @@
   <a href="https://cluster-api.sigs.k8s.io" target="_blank"><img src="./resources/capi.svg" height="32px"></a>
   <a href="http://k3s.io" target="_blank"><img src="./resources/k3s.png" height="32px"></a>
   <a href="https://linode.com" target="_blank"><img src="./resources/linode.png" height="32px"></a>
-  <a href="http://proxmox.com" target="_blank"><img src="./resources/proxmox.png" height="32px"></a>
   </br><img src="./resources/kubernetes.png" alt="Kubernetes" width="256px"/></br>
   <a href="http://cilium.io" target="_blank"><img src="./resources/cilium.png" height="32px"></a>
   <a href="https://www.tigera.io/project-calico/" target="_blank"><img src="./resources/calico.png" height="32px"></a>
@@ -15,8 +14,6 @@
   <a href="http://tetragon.io" target="_blank"><img src="./resources/tetragon.png" height="32px"></a>
   <a href="https://grafana.com/oss/grafana/" target="_blank"><img src="./resources/grafana.png" height="32px"></a>
   <a href="https://prometheus.io" target="_blank"><img src="./resources/prometheus.png" height="32px"></a>
-  <a href="https://www.jaegertracing.io" target="_blank"><img src="./resources/jaeger.png" height="32px"></a>
-  <a href="https://www.parca.dev" target="_blank"><img src="./resources/parca.png" height="32px"></a>
 </p>
 
 ## Infrastructure as Code with GitOps using Flux and Renovate

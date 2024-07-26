@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: open-telemetry
-      version: "0.97.1"
+      version: "0.100.0"
   interval: 1m0s
   releaseName: core
   targetNamespace: kube-o11y

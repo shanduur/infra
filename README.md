@@ -1,3 +1,9 @@
+> [!WARNING]  
+> # This repository has moved!
+> I am moving my infra to shared organization, and splitting apps and infra in two:
+> - https://github.com/anza-labs/infra
+> - https://github.com/anza-labs/manifests
+
 # Infra
 
 <p align="center">
